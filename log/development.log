@@ -1924,3 +1924,283 @@ INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/exten
 INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/payment_gateway/config/routes.rb
 INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/tax_calculator/config/routes.rb
 INFO: Loading routes from /home/ran/yaroki/vendor/extensions/site/config/routes.rb
+INFO: Mirroring assets from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/localization/public to /home/ran/yaroki/public
+INFO: Mirroring assets from /home/ran/yaroki/vendor/extensions/site/public to /home/ran/yaroki/public
+INFO: Loading mail preferences
+  [4;36;1mSQL (3.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAppConfiguration Load (0.5ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+  [4;36;1mPreference Load (0.3ms)[0m   [0;1mSELECT * FROM "preferences" WHERE ("preferences".owner_id = 1 AND "preferences".owner_type = 'Configuration' AND ("preferences"."attribute" = 'enable_mail_delivery' AND "preferences"."group_id" IS NULL AND "preferences"."group_type" IS NULL)) LIMIT 1[0m
+NOTICE: Mail not enabled
+INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/localization/config/routes.rb
+INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/payment_gateway/config/routes.rb
+INFO: Loading routes from /home/ran/.gem/ruby/1.8/gems/spree-0.8.99/vendor/extensions/tax_calculator/config/routes.rb
+INFO: Loading routes from /home/ran/yaroki/vendor/extensions/site/config/routes.rb
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-06-25 15:25:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mTaxonomy Load (2.2ms)[0m   [0mSELECT * FROM "taxonomies"[0m
+  [4;36;1mTaxon Load (0.7ms)[0m   [0;1mSELECT "taxons".* FROM "taxons" WHERE ("taxons".taxonomy_id IN (276849385,402847427) AND (parent_id is null))[0m
+  [4;35;1mTaxon Load (1.3ms)[0m   [0mSELECT "taxons".* FROM "taxons" WHERE ("taxons".parent_id IN (1000,20000)) ORDER BY position[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAppConfiguration Load (0.3ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache miss: Spree::Config ({})
+  [4;36;1mPreference Load (0.2ms)[0m   [0;1mSELECT * FROM "preferences" WHERE ("preferences".owner_id = 1 AND "preferences".owner_type = 'Configuration')[0m
+Cache write (will save 1.41ms): Spree::Config
+  [4;35;1mProduct Load (3.4ms)[0m   [0mSELECT * FROM "products" WHERE (products.available_on <= '2009-06-25 09:55:08' and products.deleted_at is null) LIMIT 10[0m
+  [4;36;1mImage Load (2.3ms)[0m   [0;1mSELECT "assets".* FROM "assets" WHERE ("assets"."viewable_id" IN (25673712,109241137,452235760,518820413,637144772,672404575,768308771,827682565,863378198) and "assets"."viewable_type" = 'Product') AND ( ("assets"."type" = 'Image' ) ) ORDER BY position[0m
+Rendering template within layouts/application
+Rendering products/index
+Rendered shared/_taxonomies (17.3ms)
+  [4;35;1mSQL (4.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;35;1mSQL (4.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTaxConfiguration Load (0.9ms)[0m   [0;1mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache miss: Spree::Tax::Config ({})
+  [4;35;1mPreference Load (0.7ms)[0m   [0mSELECT * FROM "preferences" WHERE ("preferences".owner_id = 2 AND "preferences".owner_type = 'Configuration')[0m
+Cache write (will save 9.72ms): Spree::Tax::Config
+  [4;36;1mSQL (4.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (4.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (4.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (5.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (4.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+[paperclip] Paperclip attachment attachment on Image initialized.
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default tax configuration') AND ( ("configurations"."type" = 'TaxConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Tax::Config ({})
+Rendered shared/_products (256.4ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count("products".id) AS count_id FROM "products" WHERE (products.available_on <= '2009-06-25 09:55:08' and products.deleted_at is null)[0m
+Rendered shared/_login_bar (126.9ms)
+Rendered shared/_store_menu (1.5ms)
+  [4;35;1mSQL (2.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Rendered shared/_language_bar (6.8ms)
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "configurations" WHERE ("configurations"."name" = 'Default configuration') AND ( ("configurations"."type" = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Rendered shared/_footer (19.5ms)
+Completed in 1173ms (View: 694, DB: 120) | 200 OK [http://127.0.0.1/]
