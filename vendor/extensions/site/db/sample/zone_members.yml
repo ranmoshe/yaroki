@@ -1,3 +1,7 @@
+israel_member:
+  zone: available_shipping
+  zoneable_id: 97
+  zoneable_type: Country
 usa_member:
   zone: available_shipping
   zoneable_id: 214
