@@ -1,0 +1,3 @@
+- copy all spree/db/sample to yaroki/vendor/extension/site/db/sample
+- change Spree:db:bootstrap and Spree/lib/setup.rb:bootstrap to accept an alternate path instead of SPREE_ROOT
+- Write a new rake task within extension/site that calls Spree:db:bootstrap, but first assign a new value where to take the data from 
