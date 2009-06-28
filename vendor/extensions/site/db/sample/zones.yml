@@ -1,6 +1,6 @@
-available_shippin:
-  name: North Americ
-  description: USA + Canad
-one_ship_optio:
-  name: Zone with one shipping optio 
-  description: Zone with one shipping optio 
+available_shipping:
+  name: North America
+  description: USA + Canada
+one_ship_option:
+  name: one with one shipping option 
+  description: one with one shipping option 
