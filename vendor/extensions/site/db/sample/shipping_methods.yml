@@ -1,5 +1,5 @@
 ups_ground:
-  name: UPG Ground
+  name: UPS Ground
   zone: available_shipping
   shipping_calculator: Spree::FlatRateShipping::Calculator
 ups_two_day:
