@@ -22,19 +22,6 @@
   		<label for="<%= t("city") %>"><%= t("city") %></label>
   		<%= ship_form.text_field :city, :class => 'required' -%><span class="req">*</span>
   	</p>    
-  	<p>
-  		<label for="<%= t("state") %>"><%= t("state") %></label>
-  		<span id="sstate">
-  			<%= collection_select("order[ship_address_attributes]", 
-  			:state_id, 
-  			@states, 
-  			:id, 
-  			:name, 
-  			{:include_blank => true}, 
-  			{:style=> 'width:150px;'}) %>
-  		</span>
-  		<span class="req">*</span>
-  	</p>  
   	<p id="szip">
   		<label for="<%=t ("zip") %>"><%= t("zip") %></label>
   		<%= ship_form.text_field :zipcode, :class => 'required' -%><span class="req">*</span>
