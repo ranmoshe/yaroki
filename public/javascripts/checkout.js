@@ -203,11 +203,11 @@ var build_address = function(region) {
     address += $('p#' + region + 'address2').val() + '<br />';
   }
   address += $('p#' + region + 'city input').val() + ', ';
-  if($('span#' + region + 'state input').length > 0) {
-    address += $('span#' + region + 'state input').val();
-  } else {
-    address += $('span#' + region + 'state :selected').html();
-  }
+  //if($('span#' + region + 'state input').length > 0) {
+  //  address += $('span#' + region + 'state input').val();
+  //} else {
+  //  address += $('span#' + region + 'state :selected').html();
+  //}
   address += ' ' + $('p#' + region + 'zip input').val() + '<br />';
   address += $('p#' + region + 'country :selected').html() + '<br />';
   address += $('p#' + region + 'phone input').val();
