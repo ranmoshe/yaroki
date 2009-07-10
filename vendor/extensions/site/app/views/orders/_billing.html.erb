@@ -27,7 +27,7 @@
   	</p>    
   	<p id="bcountry">
   		<label for="<%= t("country") %>"><%= t("country") %></label>
-  		<span id="bcountry"><%= bill_form.collection_select :country_id, @countries, :id, :name, {}, {:style => 'width:150px;', :class => 'required'} %></span>
+  		<span id="bcountry"><%= bill_form.collection_select :country_id, @countries.select{|c| c.name =='Israel'}, :id, :name, {}, {:style => 'width:150px;', :class => 'required', :disabled => true } %></span>
   	</p>
   	<p id="bphone">
   		<label for="<%= t("phone") %>"><%= t("phone") %></label>
